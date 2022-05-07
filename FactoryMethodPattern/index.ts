@@ -51,7 +51,7 @@ class Slime {
 	experiencePoint: number
 	gold: number
 
-	constructor(status: SlimeStatus) {
+	private constructor(status: SlimeStatus) {
 		this.name = status.name
 		this.hitPoint = status.hitPoint
 		this.magicPoint = status.magicPoint
@@ -95,5 +95,6 @@ module Runner {
 		})
 	}
 }
-
+// new Slime(SlimeType.liquidMetal)
+// コンストラクターにprivateをつけるとnewできなくなるのでfactoryメソッドにめっちゃいい
 Runner.blame()
